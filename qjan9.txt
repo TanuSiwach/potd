@@ -1,0 +1,22 @@
+class Solution {
+public
+    vectorint twoSum(vectorint& arr, int target) {
+        int i=0,j=arr.size()-1;
+        vectorint res;
+        while(ij)
+        {
+            int s=arr[i]+arr[j];
+            if(s==target)
+            {
+                res.push_back(i+1);
+                res.push_back(j+1);
+                return res;
+            }
+            else if(starget)
+                j--;
+            else
+                i++;
+        }
+        return res;
+    }
+};
