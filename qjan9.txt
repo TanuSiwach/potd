@@ -1,9 +1,9 @@
 class Solution {
-public
-    vectorint twoSum(vectorint& arr, int target) {
+public:
+    vector<int> twoSum(vector<int>& arr, int target) {
         int i=0,j=arr.size()-1;
-        vectorint res;
-        while(ij)
+        vector<int> res;
+        while(i<j)
         {
             int s=arr[i]+arr[j];
             if(s==target)
@@ -12,7 +12,7 @@ public
                 res.push_back(j+1);
                 return res;
             }
-            else if(starget)
+            else if(s>target)
                 j--;
             else
                 i++;
