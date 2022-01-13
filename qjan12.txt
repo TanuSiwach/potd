@@ -1,0 +1,24 @@
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        string f="";
+        for(int i=0;i<s.length();i++)
+        {
+            if(isalpha(s[i]))
+                f.push_back(tolower(s[i]));
+            else if(isdigit(s[i]))
+                f.push_back(s[i]);  
+        }
+        int n=f.length();
+        bool res=1;
+        for(int i=0,j=n-1;i<ceil((float)(n-1)/2);i++,j--)
+        {
+            if(f[i]!=f[j])
+            {
+                res=false;
+                break;
+            }
+        }
+        return res;
+    }
+};
