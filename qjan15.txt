@@ -1,0 +1,14 @@
+bool findPair(int arr[], int n, int x){
+    sort(arr,arr+n);
+    int i=0,j=1;
+    while(j<n)
+    {
+        if(arr[j]-arr[i]==x)
+        return true;
+        else if(arr[j]-arr[i]<x)
+        j++;
+        else
+        i++;
+    }
+    return false;
+}
